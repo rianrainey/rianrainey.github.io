@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+<<<<<<< HEAD
         <loc>http://rianrainey.github.io/blog/2013/09/30/Why-I-Chose-Octopress/</loc>
         <lastmod>2013-09-30T20:30:19-05:00</lastmod>
     </url>
@@ -11,6 +12,14 @@
     <url>
         <loc>http://rianrainey.github.io/</loc>
         <lastmod>2013-09-30T20:30:19-05:00</lastmod>
+=======
+        <loc>http://rianrainey.github.io/blog/archives/</loc>
+        <lastmod>2013-09-30T19:16:24-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://rianrainey.github.io/</loc>
+        <lastmod>2013-09-30T19:16:24-05:00</lastmod>
+>>>>>>> c66d8f5a9b8207c89bb401068450c3a53b3132a5
     </url>
     <url>
         <loc>http://rianrainey.github.io/robots.txt</loc>
