@@ -34,7 +34,7 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: redcarpet2
+markdown: redcarpet
 redcarpet:
   extensions: ["with_toc_data", "strikethrough"]
 rdiscount:
