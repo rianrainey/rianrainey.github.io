@@ -83,7 +83,7 @@ functionality implemented.
 
 ### Posts
 * ~~Octopress Cheat Sheet~~ Doing this in README.
-    * Rake tasks
+    * ~~Rake tasks~~
     * Available languages for syntax highlighting
 * How to Code Folding in Vim/MacVim
 
