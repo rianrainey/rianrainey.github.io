@@ -1,13 +1,41 @@
----
-layout: post
-title: "What I Want To Customize About My Octopress Site"
-date: 2013-10-01 09:51
-comments: true
-categories: [Octopress]
-published: false
----
+# www.rian.me
 
-## Features
+## Usage
+
+### Rake Tasks
+
+`rake new_page["about-me"]`
+`rake new_post["title"]`
+
+### Generate & Preview
+
+```
+rake generate   # Generates posts and pages into the public directory
+rake watch      # Watches source/ and sass/ for changes and regenerates
+rake preview    # Watches, and mounts a webserver at http://localhost:4000
+```
+
+### YML Attributes
+
+- layout: example: post|page
+- title: string
+    - example: "My Great Post"
+- date: string
+    - example: "2013-10-01 09:51"
+- comments: boolean
+    - example: false
+- categories: array
+    - example: [Octopress, Ruby, Development]
+
+
+## Deployment
+
+`rake generate`
+`rake deploy`
+
+## To Do
+
+### Features
 
 * ~~Move from rianrainey.github.io to rian.me~~
 * ~~Create a minimal theme and contribute it~~
@@ -49,17 +77,17 @@ functionality implemented.
     * Indentation
     * Figure out how to hide line numbers. (linenos:false doesn't work)
 
-## Pages
+### Pages
 * Create An About Page
-* Create a project page
+* Create a Project page
 
-## Posts
-* Octopress Cheat Sheet
+### Posts
+* ~~Octopress Cheat Sheet~~ Doing this in README.
     * Rake tasks
     * Available languages for syntax highlighting
 * How to Code Folding in Vim/MacVim
 
-## Tags
+### Tags
 * Octopress
 * Lessons (for dev meetings)
 * Vim

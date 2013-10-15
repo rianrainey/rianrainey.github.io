@@ -4,12 +4,47 @@ comments: true
 categories: [Octopress]
 ---
 
-* Simple
 * Easy Deployment
-* Markdown format posts
+* Posts in Markdown
 * Beautiful code sharing
 * Better than Jekyll
 * Easiest platform for me to blog
+
+## Easy Deployment
+
+Destinations can be to **any server** (rsync'd) , **Heroku**, or
+**Github Pages** (my personal preference). For more details on each type
+of deployment, head over to [Octopress'
+documentation](http://octopress.org/docs/deploying/). Since I prefer
+Github Pages, I'll show you how easy that is.
+
+1. Create a GH repository in the format of username.github.io. Since my
+   Github username is `rianrainey`, my repository name is
+`rianrainey.github.io`.
+2. Setup your project to work with Github with this command:
+
+```
+`rake setup_github_pages`
+```
+
+3. Generate, commit, push, deploy and more magic with this command
+
+``` 
+rake generate
+```
+
+4. Deploy to Github
+{% codeblock %}
+rake deploy
+what about this
+{% endcodeblock %}
+
+In a few minutes your site will be live at username.github.io, or
+rianrainey.github.io.
+
+To deploy your blog posts and any other changes, you only need to run
+`rake deploy` and you're done.
+
 
 ## Beautiful Code Sharing
 
@@ -17,6 +52,12 @@ I'm excited to be able to share code as easily as this:
 
 ``` bash How To Create a RVM Getset and .rvmrc For A New Project
 rvm --rvmrc --create gemset 1.9.3-p362@octopress
+```
+
+``` ruby What Ruby Would Look Like
+def my_function
+  puts "Hello World"
+end
 ```
 
 There is an entire [Octopress page](http://octopress.org/docs/blogging/code/)
