@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ruby | Rian Rainey]]></title>
-  <link href="http://rianrainey.github.io/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-11T08:51:01-06:00</updated>
-  <id>http://rianrainey.github.io/</id>
+  <link href="http://www.rian.me/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T08:15:07-06:00</updated>
+  <id>http://www.rian.me/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby?]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
+    <link href="http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
     <updated>2013-10-15T19:02:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
+    <id>http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
     <content type="html"><![CDATA[<p>My years of programming have taking me along the lines of
 learning Java in school, to PHP as a CMS hacker and now to Ruby. I was
 recently going through an exercise in

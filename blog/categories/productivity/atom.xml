@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Productivity | Rian Rainey]]></title>
+  <link href="http://www.rian.me/blog/categories/productivity/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T08:15:07-06:00</updated>
+  <id>http://www.rian.me/</id>
+  <author>
+    <name><![CDATA[Rian Rainey]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Waking Up Early]]></title>
+    <link href="http://www.rian.me/blog/2013/11/11/waking-up-early/"/>
+    <updated>2013-11-11T07:58:00-06:00</updated>
+    <id>http://www.rian.me/blog/2013/11/11/waking-up-early</id>
+    <content type="html"><![CDATA[<p>Today, I&#39;m giving &quot;waking up early&quot; another chance to be a habit in my
+life. I recently read an article on 99U with the hashtab #labrat that
+attempted to get everybody to wake up early in an effort to be more
+productive and happy. I set out to do tons of work but it resulted in
+just journaling so far.</p>
+]]></content>
+  </entry>
+  
+</feed>

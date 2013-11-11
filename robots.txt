@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://rianrainey.github.io/sitemap.xml 
+Sitemap: http://www.rian.me/sitemap.xml 
