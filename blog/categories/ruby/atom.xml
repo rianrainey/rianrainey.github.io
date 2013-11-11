@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ruby | Rian Rainey]]></title>
-  <link href="http://rianrainey.github.io/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-11T10:11:58-06:00</updated>
-  <id>http://rianrainey.github.io/</id>
+  <link href="http://www.rian.me/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T11:37:08-06:00</updated>
+  <id>http://www.rian.me/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
     
@@ -15,11 +15,11 @@
   
   <entry>
     <title type="html"><![CDATA[What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby?]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
+    <link href="http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
     <updated>2013-10-15T19:02:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
+    <id>http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
     <content type="html"><![CDATA[<p>My years of programming have taking me along the lines of
-learning Java in school, to PHP as a CMS hacker and now to Ruby. I was
+learning Java in college, to PHP as a CMS hacker and now to Ruby. I was
 recently going through an exercise in
 <a href="http://www.exercism.io">Exercism.io</a> and while somebody was
 &quot;nitpicking&quot; my code, they mentioned that I probably didn&#39;t need the <code>===</code> in my
@@ -32,20 +32,46 @@ value. It looked a little like this:</p>
 <span class="n">variableA</span> <span class="o">==</span> <span class="n">variableB</span>
 </code></pre></div>
 <p>My nitpicker mentioned that I only needed <code>==</code>. But since I came from
-the recent world of PHP, I was confused why I shouldn&#39;t use <code>===</code>. I
-discovered it had to do with the fact that everything in Ruby is an
+the recent world of PHP, I was confused why I shouldn&#39;t use <code>===</code>. In
+PHP, the double equals just checks for the same value and disregards
+type. In Ruby, it&#39;s a whole different story.</p>
+
+<p>I discovered it had to do with the fact that everything in Ruby is an
 object and different objects can have different definitions for equality
-(as with all object orient languages). Ruby&#39;s Object class has <code>===</code>, <code>.equal?</code>,
-and <code>.eql?</code>. Many times Ruby classes override <code>==</code> but <code>.equal?</code> <strong>should never be overriden</strong>.</p>
+(same goes for all object orient languages). Ruby&#39;s Object class has <code>===</code>, <code>.equal?</code>,
+and <code>.eql?</code> by default. Many times Ruby classes override <code>==</code> but <code>.equal?</code> <strong>should never be overriden</strong>.</p>
 
 <h3 id="toc_0">What is the &#39;==&#39;?</h3>
 
-<p>This is not implemented at the Ruby Object level. At the Ruby Object level, <code>===</code> returns true only if the two compared
-entities are the same object.</p>
+<p>At the Ruby Object level, <code>==</code> returns true only if the two compared
+entities are the same object. Typically this is overriden in descendant
+classes. You&#39;ll want to use this method if your object implements this. </p>
 
-<h3 id="toc_1">.eql? - Generic Equality</h3>
+<p>If you are looking for generic equality,
+consider using, <code>.eql?</code>. You should look at your particular Ruby
+object in question to see how they implemented <code>==</code>.</p>
 
-<p><strong>The eql? method returns true if obj and other have the same value.</strong> Used by Hash to test members for equality. For objects of class Object, eql? is synonymous with ==. Subclasses normally continue this tradition, but there are exceptions. Numeric types, for example, perform type conversion across ==, but not across eql?, so:</p>
+<h3 id="toc_1">What is the &#39;===&#39;?</h3>
+
+<h4 id="toc_2"><code>===</code> is the Case Equality Operator (Case Subsumption Operator)</h4>
+
+<p>The best answer I found was the Subsumption Operator answers the
+question, &quot;If I have a drawer labeled &#39;a&#39; would it make sense to put &#39;b&#39; in that drawer?&quot;</p>
+<div class="highlight"><pre><code class="text">(1..5) === 3           # =&gt; true
+(1..5) === 6           # =&gt; false
+
+Integer === 42          # =&gt; true
+Integer === &#39;fourtytwo&#39; # =&gt; false
+</code></pre></div>
+<h3 id="toc_3">What is the &#39;.eql?&#39;</h3>
+
+<p>A good synonym phrase would be &#39;Generic Equality&#39;. <strong>The eql? method returns true if obj and other have the same value.</strong></p>
+
+<p>The <code>.eql?</code> method returns <code>true</code> if both objects in question return the
+same hash key. This is used by Hash to test members for equality. For objects of class Object,
+<code>eql?</code> is synonymous with ==.</p>
+
+<p>Subclasses normally continue this tradition, but there are exceptions. Numeric types, for example, perform type conversion across ==, but not across eql?, so:</p>
 <div class="highlight"><pre><code class="text">1 == 1.0     #=&gt; true
 1.eql? 1.0   #=&gt; false
 </code></pre></div>
@@ -57,25 +83,18 @@ Typically, this method is overridden in descendant classes to provide class-spec
 meaning.</p>
 </blockquote>
 
-<h3 id="toc_2"><code>.equal?</code> - determines object identitfy</h3>
+<h3 id="toc_4">What is the &#39;.equal?&#39; - determines object identitfy</h3>
 
-<p>This is effectively pointer comparison.</p>
+<p>This is effectively pointer comparison. &quot;Is this the <em>exact</em> same
+object?&quot;</p>
 
-<h3 id="toc_3">=== is the Case Equality Operator (Case Subsumption Operator)</h3>
+<h3 id="toc_5">tldr;</h3>
 
-<p>The best answer I found was the Subsumption Operator answers the
-question, &quot;If I have a drawer labeled &#39;a&#39; would it make sense to put &#39;b&#39; in that drawer?&quot;</p>
-<div class="highlight"><pre><code class="text">(1..5) === 3           # =&gt; true
-(1..5) === 6           # =&gt; false
-
-Integer === 42          # =&gt; true
-Integer === &#39;fourtytwo&#39; # =&gt; false
-</code></pre></div>
-<h3 id="toc_4">tldr;</h3>
+<p>Equality in Ruby is confusing. You&#39;ll want to be informed when using it
+and make sure you have an effective test suite.</p>
 
 <p><code>==</code> is overriden on a per class basis. Usually you&#39;ll
-want to use the class&#39;s implementation of equals so it will be okay to
-use this.</p>
+want to use the class&#39;s implementation of equals.</p>
 
 <p><code>===</code> answers the question &quot;If I have a drawer labeled &#39;a&#39;, would it
 make sense to put &#39;b&#39; in that drawer?&quot;. You don&#39;t use this as often.</p>
@@ -89,7 +108,7 @@ a === other     # =&gt; true
 a.eql? other    # =&gt; true
 a.equal? other  # =&gt; false
 </code></pre></div>
-<h4 id="toc_5">Resources</h4>
+<h4 id="toc_6">Resources</h4>
 
 <p><a href="http://ruby-doc.org/core-2.0.0/Object.html">Ruby Object Docs</a></p>
 
@@ -97,7 +116,7 @@ a.equal? other  # =&gt; false
 
 <p><a href="http://stackoverflow.com/a/4467823/652200">Stack Overflow 1</a></p>
 
-<p><a href="http://stackoverflow.com/a/7157051/652200">Stack Ovreflow 2</a></p>
+<p><a href="http://stackoverflow.com/a/7157051/652200">Stack Overflow 2</a></p>
 ]]></content>
   </entry>
   

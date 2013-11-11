@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Unix | Rian Rainey]]></title>
-  <link href="http://rianrainey.github.io/blog/categories/unix/atom.xml" rel="self"/>
-  <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-11T10:11:58-06:00</updated>
-  <id>http://rianrainey.github.io/</id>
+  <link href="http://www.rian.me/blog/categories/unix/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T11:37:08-06:00</updated>
+  <id>http://www.rian.me/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How To Find A File Using Unix's Find]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/"/>
+    <link href="http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/"/>
     <updated>2013-10-03T09:39:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find</id>
+    <id>http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find</id>
     <content type="html"><![CDATA[<p>Whenever I need to find text within a file, I use
 <a href="http://www.beyondgrep.com">Ack</a>. However, when I need to find where a
 particular file is and I know the name of the file, there is nothing
