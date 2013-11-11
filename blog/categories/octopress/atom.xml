@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Octopress | Rian Rainey]]></title>
-  <link href="http://rianrainey.github.io/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-11T07:41:51-06:00</updated>
-  <id>http://rianrainey.github.io/</id>
+  <link href="http://www.rian.me/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T08:15:07-06:00</updated>
+  <id>http://www.rian.me/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Why I Chose Octopress]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/09/30/Why-I-Chose-Octopress/"/>
+    <link href="http://www.rian.me/blog/2013/09/30/Why-I-Chose-Octopress/"/>
     <updated>2013-09-30T00:00:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/09/30/Why-I-Chose-Octopress</id>
+    <id>http://www.rian.me/blog/2013/09/30/Why-I-Chose-Octopress</id>
     <content type="html"><![CDATA[<ul>
 <li>Easy Deployment</li>
 <li>Posts in Markdown</li>

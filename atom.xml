@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Rian Rainey]]></title>
-  <link href="http://rianrainey.github.io/atom.xml" rel="self"/>
-  <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-11T07:41:51-06:00</updated>
-  <id>http://rianrainey.github.io/</id>
+  <link href="http://www.rian.me/atom.xml" rel="self"/>
+  <link href="http://www.rian.me/"/>
+  <updated>2013-11-11T08:15:07-06:00</updated>
+  <id>http://www.rian.me/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
     
@@ -14,10 +14,23 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Waking Up Early]]></title>
+    <link href="http://www.rian.me/blog/2013/11/11/waking-up-early/"/>
+    <updated>2013-11-11T07:58:00-06:00</updated>
+    <id>http://www.rian.me/blog/2013/11/11/waking-up-early</id>
+    <content type="html"><![CDATA[<p>Today, I&#39;m giving &quot;waking up early&quot; another chance to be a habit in my
+life. I recently read an article on 99U with the hashtab #labrat that
+attempted to get everybody to wake up early in an effort to be more
+productive and happy. I set out to do tons of work but it resulted in
+just journaling so far.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby?]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
+    <link href="http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/"/>
     <updated>2013-10-15T19:02:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
+    <id>http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby</id>
     <content type="html"><![CDATA[<p>My years of programming have taking me along the lines of
 learning Java in school, to PHP as a CMS hacker and now to Ruby. I was
 recently going through an exercise in
@@ -130,9 +143,9 @@ make sense to put &#39;b&#39; in that drawer?&quot;. You don&#39;t use this as o
   
   <entry>
     <title type="html"><![CDATA[How To Find A File Using Unix's Find]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/"/>
+    <link href="http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/"/>
     <updated>2013-10-03T09:39:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find</id>
+    <id>http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find</id>
     <content type="html"><![CDATA[<p>Whenever I need to find text within a file, I use
 <a href="http://www.beyondgrep.com">Ack</a>. However, when I need to find where a
 particular file is and I know the name of the file, there is nothing
@@ -149,9 +162,9 @@ effort to read and more easily interpret Man pages.</p>
   
   <entry>
     <title type="html"><![CDATA[Why I Chose Octopress]]></title>
-    <link href="http://rianrainey.github.io/blog/2013/09/30/Why-I-Chose-Octopress/"/>
+    <link href="http://www.rian.me/blog/2013/09/30/Why-I-Chose-Octopress/"/>
     <updated>2013-09-30T00:00:00-05:00</updated>
-    <id>http://rianrainey.github.io/blog/2013/09/30/Why-I-Chose-Octopress</id>
+    <id>http://www.rian.me/blog/2013/09/30/Why-I-Chose-Octopress</id>
     <content type="html"><![CDATA[<ul>
 <li>Easy Deployment</li>
 <li>Posts in Markdown</li>
