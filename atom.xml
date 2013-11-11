@@ -4,7 +4,7 @@
   <title><![CDATA[Rian Rainey]]></title>
   <link href="http://rianrainey.github.io/atom.xml" rel="self"/>
   <link href="http://rianrainey.github.io/"/>
-  <updated>2013-11-03T22:37:42-06:00</updated>
+  <updated>2013-11-11T07:41:51-06:00</updated>
   <id>http://rianrainey.github.io/</id>
   <author>
     <name><![CDATA[Rian Rainey]]></name>
@@ -42,7 +42,7 @@ value. It looked a little like this:</p>
 the recent world of PHP, I was confused why I shouldn&#39;t use <code>===</code>. I
 discovered it had to do with the fact that everything in Ruby is an
 object and different objects can have different definitions for equality
-(as with all object orient languages). Ruby&#39;s Object class has <code>=r=</code>, <code>.equal?</code>,
+(as with all object orient languages). Ruby&#39;s Object class has <code>===</code>, <code>.equal?</code>,
 and <code>.eql?</code>. Many times Ruby classes override <code>==</code> but <code>.equal?</code> <strong>should never be overriden</strong>.</p>
 
 <h3 id="toc_0">What is the &#39;==&#39;?</h3>
