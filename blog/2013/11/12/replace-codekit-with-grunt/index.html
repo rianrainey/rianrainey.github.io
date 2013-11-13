@@ -3,13 +3,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>How To Find A File Using Unix's Find - Rian Rainey</title>
+	<title>Replace Codekit with Grunt - Rian Rainey</title>
 	<meta name="author" content="Rian Rainey">
 
 	
-	<meta name="description" content="Whenever I need to find text within a file, I use
-Ack. However, when I need to find where a
-particular file is and I know the name of the file, there &hellip;">
+	<meta name="description" content="At Centresource, we&#39;ve been using
+Codekit for the majority of our
+projects for over a year now. Codekit is a Mac desktop application that &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -80,18 +80,75 @@ particular file is and I know the name of the file, there &hellip;">
 		
 	
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">How to Find a File Using Unix's Find</h2>
-	<div class="entry-content"><p>Whenever I need to find text within a file, I use
-<a href="http://www.beyondgrep.com">Ack</a>. However, when I need to find where a
-particular file is and I know the name of the file, there is nothing
-better than using <code>find</code>. What the below command is doing is finding, in
-the current directory, by name, the file, <code>deploy.yml</code>.</p>
+	<h2 class="title">Replace Codekit With Grunt</h2>
+	<div class="entry-content"><p>At <a href="http://www.centresource.com">Centresource</a>, we&#39;ve been using
+<a href="http://incident57.com/codekit/">Codekit</a> for the majority of our
+projects for over a year now. Codekit is a Mac desktop application that provides
+a nice UI to help concatenate, minify and otherwise optimize your
+javascript and SASS files. In our entire workflow, this is the only
+non open-source piece of software we use.</p>
+
+<p>For our Rails projects, this isn&#39;t a problem because the asset pipeline
+does this for us. We use Codekit primarily for our Wordpress and Drupal
+projects.</p>
+
+<h3 id="toc_0">Why Codekit Is Bad</h3>
+
+<p>Don&#39;t get me wrong, Codekit is great if you are new to SASS and/or
+Coffeescript and you are in need of a tool the processes and optimizes
+the output. But once you feel comfortable taking the training wheels
+off, you should be looking for the best practice when it comes to
+this part of your dev workflow. The following reasons why Codekit is a
+bad practice will make sense to you:</p>
+
+<ol>
+<li><p>A contributing developer will need to have Codekit watching their
+code to prevent superfluous changes to your JS or SASS.</p></li>
+<li><p>It&#39;s a proprietary piece of software in an otherwise open-source
+codebase. Why use it if there are equal or better, free alternatives?</p></li>
+<li><p>It assumes all developers will be using a Mac OS.</p></li>
+</ol>
+
+<h3 id="toc_1">Why GruntJS Is A Good Solution to Codekit</h3>
+
+<ol>
+<li><p>It&#39;s the hot thing right now. Check out the <a href="http:yeoman.io">Yeoman</a>
+workflow.</p></li>
+<li><p>It&#39;s free.</p></li>
+<li><p>The open-source natures makes it customizable with tons of
+<a href="http://gruntjs.com/plugins">plugins</a>.</p></li>
+</ol>
+
+<h3 id="toc_2">How To Use GruntJS With Wordpress</h3>
+
+<p>Below is a basic run down of steps, but I recommend the <a href="http://gruntjs.com/getting-started">GruntJS Getting
+Started documentation</a>.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>find . -name deploy.yml</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install grunt-cli -g #install the Grunt Command Line Interface globally
+</span><span class='line'>cd ./path/to/your/app
+</span><span class='line'>npm init #create package.json file. Defaults are adequate. We'll change things later.
+</span><span class='line'>npm install grunt-contrib-sass --save-dev #add SASS preprocessor
+</span><span class='line'>npm install grunt-contrib-watch --save-dev #add ability to run GruntJS anytime there is a change to your app
+</span><span class='line'>npm install node-bourbon --save-dev #for ability to @import "bourbon" in your SASS file.</span></code></pre></td></tr></table></div></figure>
 
-<p>For information, check out <code>man find</code>. I&#39;m still making a more conserted
-effort to read and more easily interpret Man pages.</p>
+<p><a href="https://gist.github.com/rianrainey/7443208">Download my recommended
+Gruntfile.js</a>. Be sure to
+change the source and destination paths for the Uglify build parameters
+for what is specific to your Wordpress application.</p>
+
+<p>Refrences:</p>
+
+<ul>
+<li><a href="https://github.com/lacroixdesign/node-bourbon">Node Bourbon</a></li>
+<li><a href="http://gruntjs.com/getting-started">GruntJS Getting Started Guide</a></li>
+<li><a href="http://yeoman.io/">Yeoman</a></li>
+</ul>
 </div>
 
 
@@ -108,12 +165,8 @@ effort to read and more easily interpret Man pages.</p>
   
 
 
-<time datetime="2013-10-03T09:39:00-05:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2013</time></div>
+<time datetime="2013-11-12T19:24:00-06:00" pubdate data-updated="true">Nov 12<span>th</span>, 2013</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/unix/'>Unix</a>
-
 
 </div>
 	
@@ -159,8 +212,8 @@ effort to read and more easily interpret Man pages.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/';
-        var disqus_url = 'http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/';
+        var disqus_identifier = 'http://www.rian.me/blog/2013/11/12/replace-codekit-with-grunt/';
+        var disqus_url = 'http://www.rian.me/blog/2013/11/12/replace-codekit-with-grunt/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -2,32 +2,36 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://www.rian.me/blog/2013/09/30/Why-I-Chose-Octopress/</loc>
-        <lastmod>2013-11-11T08:13:16-06:00</lastmod>
+        <lastmod>2013-11-12T21:48:52-06:00</lastmod>
     </url>
     <url>
         <loc>http://www.rian.me/blog/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/</loc>
-        <lastmod>2013-11-11T08:13:16-06:00</lastmod>
+        <lastmod>2013-11-12T21:48:52-06:00</lastmod>
     </url>
     <url>
         <loc>
             http://www.rian.me/blog/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/
         </loc>
-        <lastmod>2013-11-11T10:48:56-06:00</lastmod>
+        <lastmod>2013-11-12T21:48:52-06:00</lastmod>
     </url>
     <url>
         <loc>http://www.rian.me/blog/2013/11/11/waking-up-early/</loc>
-        <lastmod>2013-11-11T11:39:25-06:00</lastmod>
+        <lastmod>2013-11-12T21:48:52-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.rian.me/blog/2013/11/12/replace-codekit-with-grunt/</loc>
+        <lastmod>2013-11-13T09:24:45-06:00</lastmod>
     </url>
     <url>
         <loc>http://www.rian.me/blog/archives/</loc>
-        <lastmod>2013-11-11T11:39:25-06:00</lastmod>
+        <lastmod>2013-11-13T09:24:45-06:00</lastmod>
     </url>
     <url>
         <loc>http://www.rian.me/</loc>
-        <lastmod>2013-11-11T11:39:25-06:00</lastmod>
+        <lastmod>2013-11-13T09:24:45-06:00</lastmod>
     </url>
     <url>
         <loc>http://www.rian.me/robots.txt</loc>
-        <lastmod>2013-11-11T08:13:16-06:00</lastmod>
+        <lastmod>2013-11-12T21:46:45-06:00</lastmod>
     </url>
 </urlset>
