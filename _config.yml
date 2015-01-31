@@ -1,0 +1,41 @@
+# Site settings
+title:       Rian Rainey
+email:       hello@rian.me
+author:      Rian Rainey
+description: "Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS."
+baseurl:     ""
+url:         "http://www.rian.me"
+
+# Google analytics
+google_analytics: 'UA-44486546-1'
+
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:
+
+# Social icons
+show_social_icons: true
+github_username: rianrainey
+stackoverflow_id:
+twitter_username: rianrainey
+google_plus_id:
+linkedin_username: rianrainey
+bitcoin_url:
+paypal_url:
+flattr_button:
+
+# Build settings
+markdown:     kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     10
+sass:
+  compressed: true
+gems:
+  - jekyll-sitemap

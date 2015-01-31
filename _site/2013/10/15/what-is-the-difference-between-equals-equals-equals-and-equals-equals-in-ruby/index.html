@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby? &#8211; Rian Rainey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Coming from the PHP world, this was a little confusing. I deep dove into Ruby to discover how all this worked.">
+    <meta name="author" content="Rian Rainey">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://www.rian.me/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201501311538" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby?">
+    <meta property="og:description" content="Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS.">
+    <meta property="og:url" content="http://www.rian.me/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/">
+    <meta property="og:site_name" content="Rian Rainey">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+</head>
+
+<body class="">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://www.rian.me" class="site-title">Rian Rainey</a>
+      <nav class="site-nav right">
+        <a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>What is the difference between '===', '==', '.equal?' and '.eql?' in Ruby?</h1>
+  <span class="post-meta">Oct 15, 2013</span><br>
+  
+  <span class="post-meta small">
+  
+    3 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <p>My years of programming have taking me along the lines of
+learning Java in college, to PHP as a CMS hacker and now to Ruby. I was
+recently going through an exercise in
+<a href="http://www.exercism.io">Exercism.io</a> and while somebody was
+“nitpicking” my code, they mentioned that I probably didn’t need the <code>===</code> in my
+code. My code was making sure two variables were of the same type and
+value. It looked a little like this:</p>
+
+<p>``` ruby
+# Bad - my original code
+variableA === variableB</p>
+
+<h1 id="good---my-new-code">Good - my new code</h1>
+<p>variableA == variableB
+```</p>
+
+<p>My nitpicker mentioned that I only needed <code>==</code>. But since I came from
+the recent world of PHP, I was confused why I shouldn’t use <code>===</code>. In
+PHP, the double equals just checks for the same value and disregards
+type. In Ruby, it’s a whole different story.</p>
+
+<p>I discovered it had to do with the fact that everything in Ruby is an
+object and different objects can have different definitions for equality
+(same goes for all object orient languages). Ruby’s Object class has <code>===</code>, <code>.equal?</code>,
+and <code>.eql?</code> by default. Many times Ruby classes override <code>==</code> but <code>.equal?</code> <strong>should never be overriden</strong>.</p>
+
+<h3 id="what-is-the-">What is the ‘==’?</h3>
+
+<p>At the Ruby Object level, <code>==</code> returns true only if the two compared
+entities are the same object. Typically this is overriden in descendant
+classes. You’ll want to use this method if your object implements this. </p>
+
+<p>If you are looking for generic equality,
+consider using, <code>.eql?</code>. You should look at your particular Ruby
+object in question to see how they implemented <code>==</code>.</p>
+
+<h3 id="what-is-the--1">What is the ‘===’?</h3>
+
+<h4 id="is-the-case-equality-operator-case-subsumption-operator"><code>===</code> is the Case Equality Operator (Case Subsumption Operator)</h4>
+
+<p>The best answer I found was the Subsumption Operator answers the
+question, “If I have a drawer labeled ‘a’ would it make sense to put ‘b’ in that drawer?”</p>
+
+<p>```
+(1..5) === 3           # =&gt; true
+(1..5) === 6           # =&gt; false</p>
+
+<p>Integer === 42          # =&gt; true
+Integer === ‘fourtytwo’ # =&gt; false
+```</p>
+
+<h3 id="what-is-the-eql">What is the ‘.eql?’</h3>
+
+<p>A good synonym phrase would be ‘Generic Equality’. <strong>The eql? method returns true if obj and other have the same value.</strong></p>
+
+<p>The <code>.eql?</code> method returns <code>true</code> if both objects in question return the
+same hash key. This is used by Hash to test members for equality. For objects of class Object,
+<code>eql?</code> is synonymous with ==.</p>
+
+<p>Subclasses normally continue this tradition, but there are exceptions. Numeric types, for example, perform type conversion across ==, but not across eql?, so:</p>
+
+<p><code>
+1 == 1.0     #=&gt; true
+1.eql? 1.0   #=&gt; false
+</code></p>
+
+<p>The Ruby Documentation explains <code>==</code> well:</p>
+
+<blockquote>
+  <p>At the Object level, <code>==</code> returns true only if obj and other are the same object.
+Typically, this method is overridden in descendant classes to provide class-specific
+meaning.</p>
+</blockquote>
+
+<h3 id="what-is-the-equal---determines-object-identitfy">What is the ‘.equal?’ - determines object identitfy</h3>
+
+<p>This is effectively pointer comparison. “Is this the <em>exact</em> same
+object?”</p>
+
+<h3 id="tldr">tldr;</h3>
+
+<p>Equality in Ruby is confusing. You’ll want to be informed when using it
+and make sure you have an effective test suite.</p>
+
+<p><code>==</code> is overriden on a per class basis. Usually you’ll
+want to use the class’s implementation of equals.</p>
+
+<p><code>===</code> answers the question “If I have a drawer labeled ‘a’, would it
+make sense to put ‘b’ in that drawer?”. You don’t use this as often.</p>
+
+<p><code>.equal?</code> should never be overriden by a subclass.</p>
+
+<p>```
+a = “a”         # =&gt; “a”
+other = a.dup   # =&gt; “a”</p>
+
+<p>a == other      # =&gt; true
+a === other     # =&gt; true
+a.eql? other    # =&gt; true
+a.equal? other  # =&gt; false
+```</p>
+
+<h4 id="resources">Resources</h4>
+
+<p><a href="http://ruby-doc.org/core-2.0.0/Object.html">Ruby Object Docs</a></p>
+
+<p><a href="http://ruby-doc.org/core-2.0.0/String.html#method-i-3D-3D-3D">Ruby String === Docs</a></p>
+
+<p><a href="http://stackoverflow.com/a/4467823/652200">Stack Overflow 1</a></p>
+
+<p><a href="http://stackoverflow.com/a/7157051/652200">Stack Overflow 2</a></p>
+
+</article>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Made in Nashville, TN<br>
+        &lt;/&gt; available on <a
+          href="https://github.com/rianrainey/rianrainey.github.io">Github</a>.
+      </small>
+      
+        <div class="social-icons">
+  
+    <a target='blank' class="fa fa-github" href="https://github.com/rianrainey"></a>
+  
+  
+  <a target='blank' class="fa fa-rss" href="/feed.xml"></a>
+  
+    <a target='blank' class="fa fa-twitter" href="https://twitter.com/rianrainey"></a>
+  
+  
+  
+    <a target='blank' class="fa fa-envelope" href="mailto:hello@rian.me"></a>
+  
+  
+    <a target='blank' class="fa fa-linkedin" href="https://www.linkedin.com/in/rianrainey"></a>
+  
+  
+  
+  
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-44486546-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

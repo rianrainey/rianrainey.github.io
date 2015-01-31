@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://www.rian.me/2013/11/12/replace-codekit-with-grunt/</loc>
+    <lastmod>2013-11-12T19:24:00-06:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/2013/11/11/waking-up-early/</loc>
+    <lastmod>2013-11-11T07:58:00-06:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/2013/10/15/what-is-the-difference-between-equals-equals-equals-and-equals-equals-in-ruby/</loc>
+    <lastmod>2013-10-15T19:02:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/</loc>
+    <lastmod>2013-10-03T09:39:00-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/404.html</loc>
+    <lastmod>2015-01-31T15:38:52-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/contact/</loc>
+    <lastmod>2015-01-31T15:38:52-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://www.rian.me/</loc>
+    <lastmod>2015-01-31T15:38:52-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
