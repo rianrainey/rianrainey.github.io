@@ -5,6 +5,9 @@ Jekyll blog for Rian Rainey
 ## Get Started
 
 ```
+git clone [repo-url]
+cd rianrainey.github.io
+bundle install
 jekyll serve
 ```
 
