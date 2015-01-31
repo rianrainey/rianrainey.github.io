@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rian Rainey</title>
+    <title>Replace Codekit with Grunt &#8211; Rian Rainey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS.">
+    <meta name="description" content="It's time to replace Codekit with Grunt. Open source > Proprietary.">
     <meta name="author" content="Rian Rainey">
-    
-    <link rel="canonical" href="http://www.rian.me/404.html">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://www.rian.me/2013/11/12/replace-codekit-with-grunt/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/pixyll.css?201501311538" type="text/css">
@@ -24,9 +24,9 @@
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Rian Rainey">
+    <meta property="og:title" content="Replace Codekit with Grunt">
     <meta property="og:description" content="Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS.">
-    <meta property="og:url" content="http://www.rian.me/404.html">
+    <meta property="og:url" content="http://www.rian.me/2013/11/12/replace-codekit-with-grunt/">
     <meta property="og:site_name" content="Rian Rainey">
 
     <!-- Icons -->
@@ -46,8 +46,8 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
 
-<body>
-  <div class="site-wrap center">
+<body class="">
+  <div class="site-wrap">
     <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
@@ -64,14 +64,106 @@
 
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
-        <h1 id="section">404</h1>
+        
 
-<p>Sorry, we can’t seem to find this page.</p>
 
-<div class="mt3">
-  <a href="/" class="button button-blue button-big">Home</a>
-  <a href="/contact/" class="button button-blue button-big">Contact</a>
+<div class="post-header mb2">
+  <h1>Replace Codekit with Grunt</h1>
+  <span class="post-meta">Nov 12, 2013</span><br>
+  
+  <span class="post-meta small">
+  
+    2 minute read
+  
+  </span>
 </div>
+
+<article class="post-content">
+  <p>At <a href="http://www.centresource.com">Centresource</a>, we’ve been using
+<a href="http://incident57.com/codekit/">Codekit</a> for the majority of our
+projects for over a year now. Codekit is a Mac desktop application that provides
+a nice UI to help concatenate, minify and otherwise optimize your
+javascript and SASS files. In our entire workflow, this is the only
+non open-source piece of software we use.</p>
+
+<p>For our Rails projects, this isn’t a problem because the asset pipeline
+does this for us. We use Codekit primarily for our Wordpress and Drupal
+projects.</p>
+
+<h3 id="why-codekit-is-bad">Why Codekit Is Bad</h3>
+
+<p>Don’t get me wrong, Codekit is great if you are new to SASS and/or
+Coffeescript and you are in need of a tool the processes and optimizes
+the output. But once you feel comfortable taking the training wheels
+off, you should be looking for the best practice when it comes to
+this part of your dev workflow. The following reasons why Codekit is a
+bad practice will make sense to you:</p>
+
+<ol>
+  <li>
+    <p>A contributing developer will need to have Codekit watching their
+code to prevent superfluous changes to your JS or SASS.</p>
+  </li>
+  <li>
+    <p>It’s a proprietary piece of software in an otherwise open-source
+codebase. Why use it if there are equal or better, free alternatives?</p>
+  </li>
+  <li>
+    <p>It assumes all developers will be using a Mac OS.</p>
+  </li>
+</ol>
+
+<h3 id="why-gruntjs-is-a-good-solution-to-codekit">Why GruntJS Is A Good Solution to Codekit</h3>
+
+<ol>
+  <li>
+    <p>It’s the hot thing right now. Check out the <a href="http:yeoman.io">Yeoman</a>
+workflow.</p>
+  </li>
+  <li>
+    <p>It’s free.</p>
+  </li>
+  <li>
+    <p>The open-source natures makes it customizable with tons of
+<a href="http://gruntjs.com/plugins">plugins</a>.</p>
+  </li>
+</ol>
+
+<h3 id="how-to-use-gruntjs-with-wordpress">How To Use GruntJS With Wordpress</h3>
+
+<p>Below is a basic run down of steps, but I recommend the <a href="http://gruntjs.com/getting-started">GruntJS Getting
+Started documentation</a>.</p>
+
+<p><code>
+npm install grunt-cli -g #install the Grunt Command Line Interface globally
+cd ./path/to/your/app
+npm init #create package.json file. Defaults are adequate. We'll change things later.
+npm install grunt-contrib-sass --save-dev #add SASS preprocessor
+npm install grunt-contrib-watch --save-dev #add ability to run GruntJS anytime there is a change to your app
+npm install node-bourbon --save-dev #for ability to @import "bourbon" in your SASS file.
+</code></p>
+
+<p><a href="https://gist.github.com/rianrainey/7443208">Download my recommended
+Gruntfile.js</a>. Be sure to
+change the source and destination paths for the Uglify build parameters
+for what is specific to your Wordpress application.</p>
+
+<p>Refrences:</p>
+
+<ul>
+  <li><a href="https://github.com/lacroixdesign/node-bourbon">Node Bourbon</a></li>
+  <li><a href="http://gruntjs.com/getting-started">GruntJS Getting Started Guide</a></li>
+  <li><a href="http://yeoman.io/">Yeoman</a></li>
+</ul>
+
+
+</article>
+
+
+
+
+
+
 
       </div>
     </div>

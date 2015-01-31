@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rian Rainey</title>
+    <title>How To Find A File Using Unix's Find &#8211; Rian Rainey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS.">
+    <meta name="description" content="I can never remember. If I post it, then I will, right?">
     <meta name="author" content="Rian Rainey">
-    
-    <link rel="canonical" href="http://www.rian.me/404.html">
+    <meta name="keywords" content="">
+    <link rel="canonical" href="http://www.rian.me/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/pixyll.css?201501311538" type="text/css">
@@ -24,9 +24,9 @@
     <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Rian Rainey">
+    <meta property="og:title" content="How To Find A File Using Unix's Find">
     <meta property="og:description" content="Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS.">
-    <meta property="og:url" content="http://www.rian.me/404.html">
+    <meta property="og:url" content="http://www.rian.me/2013/10/03/how-to-find-a-file-using-unix-slash-s-find/">
     <meta property="og:site_name" content="Rian Rainey">
 
     <!-- Icons -->
@@ -46,8 +46,8 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
 
-<body>
-  <div class="site-wrap center">
+<body class="">
+  <div class="site-wrap">
     <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
@@ -64,14 +64,43 @@
 
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
-        <h1 id="section">404</h1>
+        
 
-<p>Sorry, we can’t seem to find this page.</p>
 
-<div class="mt3">
-  <a href="/" class="button button-blue button-big">Home</a>
-  <a href="/contact/" class="button button-blue button-big">Contact</a>
+
+
+<div class="post-header mb2">
+  <h1>How To Find A File Using Unix's Find</h1>
+  <span class="post-meta">Oct 3, 2013</span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
 </div>
+
+<article class="post-content">
+  <p>Whenever I need to find text within a file, I use
+<a href="http://www.beyondgrep.com">Ack</a>. However, when I need to find where a
+particular file is and I know the name of the file, there is nothing
+better than using <code>find</code>. What the below command is doing is finding, in
+the current directory, by name, the file, <code>deploy.yml</code>.</p>
+
+<p><code>
+find . -name deploy.yml
+</code></p>
+
+<p>For information, check out <code>man find</code>. I’m still making a more conserted
+effort to read and more easily interpret Man pages.</p>
+
+</article>
+
+
+
+
+
+
 
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import "base/variables";
+
 @charset "UTF-8";
 /*
 
@@ -678,7 +680,7 @@ body {
 }
 
 a {
-  color: #0096cc;
+  color: $orange;
   text-decoration: none;
 }
 a:hover {
@@ -712,6 +714,14 @@ a:hover {
 .button-gray:hover {
   color: #fff;
   background-color: #444444;
+}
+.button-orange {
+  color: $black;
+  background-color: $orange;
+}
+.button-orange:hover {
+  color: $black;
+  background-color: $orange;
 }
 
 .form-light .input,

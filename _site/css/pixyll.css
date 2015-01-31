@@ -527,7 +527,7 @@ body {
   background-color: #fff; }
 
 a {
-  color: #0096cc;
+  color: #F9B404;
   text-decoration: none; }
 
 a:hover {
@@ -558,6 +558,14 @@ a:hover {
 .button-gray:hover {
   color: #fff;
   background-color: #444444; }
+
+.button-orange {
+  color: #000000;
+  background-color: #F9B404; }
+
+.button-orange:hover {
+  color: #000000;
+  background-color: #F9B404; }
 
 .form-light .input,
 .form-light .textarea,
