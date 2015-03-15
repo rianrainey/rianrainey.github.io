@@ -1,10 +1,11 @@
 # Site settings
-title:       Rian Rainey
-email:       hello@rian.me
-author:      Rian Rainey
-description: "Rian Rainey is a software consultant in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS."
-baseurl:     ""
-url:         "http://www.rian.me"
+title:           Rian Rainey | Software Engineer | Nashville | Ruby/iOS/Javascript
+template_title:  Rian Rainey
+email:           hello@rian.me
+author:          Rian Rainey
+description:     "Rian Rainey is a software engineer in Nashville, Tennessee. He specializes in Ruby, Rails, HTML/CSS/JS and iOS."
+baseurl:         ""
+url:             "http://www.rian.me"
 
 # Google analytics
 google_analytics: 'UA-44486546-1'
